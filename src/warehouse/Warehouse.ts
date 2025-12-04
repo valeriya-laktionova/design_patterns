@@ -12,10 +12,6 @@ export interface ShapeMetrics {
   volume?: number;
 }
 
-/**
- * Warehouse singleton: stores precalculated metrics for shapes
- * and listens to repository events to keep them up to date.
- */
 export class Warehouse implements Observer<ShapeEvent> {
   private static instance: Warehouse | null = null;
 
