@@ -65,7 +65,7 @@ export class PyramidService {
     const heightApex = apexZ - planeZ;
     const totalHeight = apexZ - (pyramid.basePoints[0].z ?? 0);
 
-    const volBelow = totalVol * (heightBase / totalHeight) ** 3; // Пропорция кубическая для пирамиды
+    const volBelow = totalVol * (heightBase / totalHeight) ** 3;
     const volAbove = totalVol - volBelow;
     return { below: volBelow, above: volAbove };
   }
